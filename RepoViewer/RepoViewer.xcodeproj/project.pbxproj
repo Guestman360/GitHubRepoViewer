@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		044093D0205C625B00F4852F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044093CF205C625B00F4852F /* AppDelegate.swift */; };
-		044093D2205C625B00F4852F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044093D1205C625B00F4852F /* ViewController.swift */; };
 		044093D5205C625B00F4852F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044093D3205C625B00F4852F /* Main.storyboard */; };
 		044093D7205C625B00F4852F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044093D6205C625B00F4852F /* Assets.xcassets */; };
 		044093DA205C625B00F4852F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044093D8205C625B00F4852F /* LaunchScreen.storyboard */; };
 		044093E5205C625B00F4852F /* RepoViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044093E4205C625B00F4852F /* RepoViewerTests.swift */; };
+		044093F8205C67D800F4852F /* RepoViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044093F7205C67D800F4852F /* RepoViewVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,6 @@
 /* Begin PBXFileReference section */
 		044093CC205C625B00F4852F /* RepoViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044093CF205C625B00F4852F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		044093D1205C625B00F4852F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		044093D4205C625B00F4852F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		044093D6205C625B00F4852F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		044093D9205C625B00F4852F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		044093E0205C625B00F4852F /* RepoViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepoViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		044093E4205C625B00F4852F /* RepoViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewerTests.swift; sourceTree = "<group>"; };
 		044093E6205C625B00F4852F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		044093F7205C67D800F4852F /* RepoViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,6 @@
 				044093F0205C64DD00F4852F /* View */,
 				044093EF205C64CA00F4852F /* Model */,
 				044093CF205C625B00F4852F /* AppDelegate.swift */,
-				044093D1205C625B00F4852F /* ViewController.swift */,
 				044093D3205C625B00F4852F /* Main.storyboard */,
 				044093D6205C625B00F4852F /* Assets.xcassets */,
 				044093D8205C625B00F4852F /* LaunchScreen.storyboard */,
@@ -121,6 +120,7 @@
 		044093F1205C64E600F4852F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				044093F7205C67D800F4852F /* RepoViewVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -263,8 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				044093D2205C625B00F4852F /* ViewController.swift in Sources */,
 				044093D0205C625B00F4852F /* AppDelegate.swift in Sources */,
+				044093F8205C67D800F4852F /* RepoViewVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
