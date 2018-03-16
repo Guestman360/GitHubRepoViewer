@@ -77,6 +77,12 @@
 		044093CE205C625B00F4852F /* RepoViewer */ = {
 			isa = PBXGroup;
 			children = (
+				044093F5205C656300F4852F /* Constants */,
+				044093F3205C64F700F4852F /* Extensions */,
+				044093F2205C64F000F4852F /* Services */,
+				044093F1205C64E600F4852F /* Controller */,
+				044093F0205C64DD00F4852F /* View */,
+				044093EF205C64CA00F4852F /* Model */,
 				044093CF205C625B00F4852F /* AppDelegate.swift */,
 				044093D1205C625B00F4852F /* ViewController.swift */,
 				044093D3205C625B00F4852F /* Main.storyboard */,
@@ -94,6 +100,64 @@
 				044093E6205C625B00F4852F /* Info.plist */,
 			);
 			path = RepoViewerTests;
+			sourceTree = "<group>";
+		};
+		044093EF205C64CA00F4852F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		044093F0205C64DD00F4852F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				044093F4205C651900F4852F /* Xibs */,
+				044093F6205C658200F4852F /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		044093F1205C64E600F4852F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		044093F2205C64F000F4852F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		044093F3205C64F700F4852F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		044093F4205C651900F4852F /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		044093F5205C656300F4852F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		044093F6205C658200F4852F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
