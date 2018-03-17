@@ -51,7 +51,7 @@ class RepoCell: UITableViewCell {
             
             let translatedStarsCount = String.localizedStringWithFormat(NSLocalizedString("Stars: %i", comment: "Stars: %i"), stars)
             repoStarsLbl.text = translatedStarsCount
-            let translatedForksCount = String.localizedStringWithFormat(NSLocalizedString("fork: %i", comment: "fork: %i"), forks)
+            let translatedForksCount = String.localizedStringWithFormat(NSLocalizedString("Fork: %i", comment: "fork: %i"), forks)
             repoForksLbl.text = translatedForksCount
         }
         
@@ -61,7 +61,7 @@ class RepoCell: UITableViewCell {
         } else {
             dateString = NSLocalizedString("Unknown", comment: "")
         }
-        let translatedDate = String.localizedStringWithFormat(NSLocalizedString("updated: %@", comment: "updated: %@"), dateString)
+        let translatedDate = String.localizedStringWithFormat(NSLocalizedString("Updated: %@", comment: "updated: %@"), dateString)
         repoUpdatedLbl.text = translatedDate
     }
 

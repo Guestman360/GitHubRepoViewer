@@ -16,26 +16,29 @@ class RepoViewVC: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    let repoCellID = "repoCell"
-    
+    // Properties
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
     var manager = RepoManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Delegate setup for both tableview and seachbar
         searchBar.delegate = self
         
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView(frame: .zero)
-        // Create programmatically later
-//        activityIndicator.center = view.center
-//        view.addSubview(activityIndicator)
-//        view.bringSubview(toFront: activityIndicator)
+        
+        // set up activity indicator
+        activityIndicator.center = CGPoint(x: self.view.bounds.size.width/2, y: self.view.bounds.size.height/2)
+        activityIndicator.color = UIColor.black
+        self.view.addSubview(activityIndicator)
         
         // From extension to help resign keyobard when tapping on screen, helpful for user experience
         hideKeyboard()
         
+        // For our tableview cells
         self.getNib()
     }
     
@@ -58,10 +61,19 @@ class RepoViewVC: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func showSpinner() {
+        activityIndicator.startAnimating()
+    }
+    
+    func hideSpinner() {
+        activityIndicator.stopAnimating()
+    }
+    
     // create a card view for cells??
     // http://www.kaleidosblog.com/swift-cache-how-to-download-and-cache-data-in-ios
     
     func searchReposForOwnerWithName(text: String?) {
+        self.showSpinner()
         manager.closeCurrentSessionTaskIfNeeded()
         if let text = text {
             manager.fetchRepos(ownerName: text, forceLoad: true) { [weak self] result in
@@ -92,6 +104,7 @@ class RepoViewVC: UIViewController {
                     }
                     
                     self?.reloadUI()
+                    self?.hideSpinner()
                 }
             }
         } else {
@@ -111,6 +124,7 @@ extension RepoViewVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let repoCellID = "repoCell"
         if let cell = tableView.dequeueReusableCell(withIdentifier: repoCellID, for: indexPath) as? RepoCell {
             
             if let repoAtIndex = manager.repoForIndexPath(indexPath) {
