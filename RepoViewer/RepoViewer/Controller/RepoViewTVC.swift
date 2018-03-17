@@ -12,14 +12,24 @@ class RepoViewTVC: UITableViewController {
     
     // Outlets
     @IBOutlet weak var searchBar: UISearchBar!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.getNib()
     }
-
+    
+    // method to help call our section header xib
+    func getNib() {
+        let nib = UINib(nibName: "SectionHeader", bundle: nil)
+        tableView.register(nib, forHeaderFooterViewReuseIdentifier: "SectionHeader")
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
+    }
+    
+    // Call this method to reload UI
+    func reloadUI() {
+        tableView.reloadData()
+    }
     
     // create a card view for cells??
 }

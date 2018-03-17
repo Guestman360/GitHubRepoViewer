@@ -24,6 +24,7 @@ class RepoCell: UITableViewCell {
         super.awakeFromNib()
         //cardSetUp()
     }
+    // get image for star, fork and add next to respective label
     // Add proxima nove reg, light and bold later, also gradient view
     // Add a uiview to bckground later
     //Set up the design of the cardview
