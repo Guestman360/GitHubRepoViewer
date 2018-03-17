@@ -51,11 +51,11 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <stackView opaque="NO" contentMode="scaleAspectFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="S3u-zn-Vfa">
+                                                        <stackView opaque="NO" contentMode="scaleAspectFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="S3u-zn-Vfa">
                                                             <rect key="frame" x="0.0" y="78" width="345" height="20"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="l9O-2e-yJy">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="67" height="20"/>
+                                                                <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="equalCentering" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="l9O-2e-yJy">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="20"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvN-g0-rUt">
                                                                             <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -65,18 +65,18 @@
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xC4-rI-hpo">
-                                                                            <rect key="frame" x="25" y="0.0" width="42" height="20"/>
+                                                                            <rect key="frame" x="22" y="0.0" width="38" height="20"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" id="jML-4U-Ojo"/>
                                                                             </constraints>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8p0-y9-WgU">
-                                                                    <rect key="frame" x="136" y="0.0" width="69.5" height="20"/>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="8p0-y9-WgU">
+                                                                    <rect key="frame" x="138" y="0.0" width="66.5" height="20"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nML-gi-aAJ">
                                                                             <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -86,19 +86,19 @@
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5b5-UU-gGx">
-                                                                            <rect key="frame" x="25" y="0.0" width="44.5" height="20"/>
+                                                                            <rect key="frame" x="22" y="0.0" width="44.5" height="20"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44.5" id="ASd-ie-FTf"/>
                                                                             </constraints>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUZ-iJ-gs6">
-                                                                    <rect key="frame" x="274.5" y="0.0" width="70.5" height="20"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                    <rect key="frame" x="282" y="0.0" width="63" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
