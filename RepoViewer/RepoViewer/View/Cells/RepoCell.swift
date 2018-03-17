@@ -16,6 +16,9 @@ class RepoCell: UITableViewCell {
     @IBOutlet weak var repoStarsLbl: UILabel!
     @IBOutlet weak var repoForksLbl: UILabel!
     @IBOutlet weak var repoUpdatedLbl: UILabel!
+    @IBOutlet weak var starImg: UIImageView!
+    @IBOutlet weak var forkImg: UIImageView!
+    
     
     let dateFormatter = DateFormatter()
     
@@ -36,8 +39,12 @@ class RepoCell: UITableViewCell {
             
             let translatedStarsCount = String.localizedStringWithFormat(NSLocalizedString("Stars: %i", comment: "Stars: %i"), stars)
             repoStarsLbl.text = translatedStarsCount
-            let translatedForksCount = String.localizedStringWithFormat(NSLocalizedString("Fork: %i", comment: "Fork: %i"), forks)
+            let translatedForksCount = String.localizedStringWithFormat(NSLocalizedString("Forks: %i", comment: "Fork: %i"), forks)
             repoForksLbl.text = translatedForksCount
+            
+            // Set up the star and fork images
+            starImg.image = #imageLiteral(resourceName: "star")
+            forkImg.image = #imageLiteral(resourceName: "network")
         }
         
         let dateString: String
