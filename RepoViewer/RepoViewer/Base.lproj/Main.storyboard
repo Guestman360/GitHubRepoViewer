@@ -17,7 +17,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--RepoViewer-->
+        <!--Repo ViewVC-->
         <scene sceneID="tOM-Hi-LDh">
             <objects>
                 <viewController id="OP2-RY-ha2" customClass="RepoViewVC" customModule="RepoViewer" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t4l-bB-MNd">
-                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="repoCell" rowHeight="120" id="JSf-WF-uIb" customClass="RepoCell" customModule="RepoViewer" customModuleProvider="target">
@@ -94,30 +94,32 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="9V4-Sr-FWW">
-                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9V4-Sr-FWW" firstAttribute="trailing" secondItem="BXN-6P-bgJ" secondAttribute="trailing" id="9kP-Kk-K21"/>
-                            <constraint firstItem="t4l-bB-MNd" firstAttribute="top" secondItem="9V4-Sr-FWW" secondAttribute="bottom" id="SQS-qs-g2C"/>
+                            <constraint firstItem="t4l-bB-MNd" firstAttribute="top" secondItem="BXN-6P-bgJ" secondAttribute="top" id="QLJ-3B-IZ4"/>
                             <constraint firstItem="t4l-bB-MNd" firstAttribute="bottom" secondItem="BXN-6P-bgJ" secondAttribute="bottom" id="Ym0-Kg-Wyg"/>
                             <constraint firstItem="t4l-bB-MNd" firstAttribute="trailing" secondItem="BXN-6P-bgJ" secondAttribute="trailing" id="aJR-pv-5Bs"/>
-                            <constraint firstItem="9V4-Sr-FWW" firstAttribute="top" secondItem="BXN-6P-bgJ" secondAttribute="top" id="gh8-B6-012"/>
-                            <constraint firstItem="9V4-Sr-FWW" firstAttribute="leading" secondItem="BXN-6P-bgJ" secondAttribute="leading" id="raB-Yq-009"/>
                             <constraint firstItem="t4l-bB-MNd" firstAttribute="leading" secondItem="BXN-6P-bgJ" secondAttribute="leading" id="ujA-gr-DJs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BXN-6P-bgJ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="RepoViewer" id="LaW-KZ-sQt"/>
+                    <navigationItem key="navigationItem" id="LaW-KZ-sQt">
+                        <connections>
+                            <outlet property="titleView" destination="9V4-Sr-FWW" id="eab-Zo-JI6"/>
+                        </connections>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="9V4-Sr-FWW" id="yv6-uf-lmY"/>
                         <outlet property="tableView" destination="t4l-bB-MNd" id="ZVk-zV-RLV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6KD-FC-g8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchBar contentMode="redraw" placeholder="Search for repo owner by name" id="9V4-Sr-FWW">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
             </objects>
             <point key="canvasLocation" x="89" y="824"/>
         </scene>
