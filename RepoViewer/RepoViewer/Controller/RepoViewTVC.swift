@@ -1,5 +1,5 @@
 //
-//  RepoViewVC.swift
+//  RepoViewTVC.swift
 //  RepoViewer
 //
 //  Created by Matt Guest on 3/16/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RepoViewVC: UIViewController {
+class RepoViewTVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,4 +16,6 @@ class RepoViewVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
+    // create a card view for cells??
 }

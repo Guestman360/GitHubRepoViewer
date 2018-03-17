@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+extension Date {
+    
+    var stringDate: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy"
+        return formatter.string(from: self)
+    }
+    
+}
