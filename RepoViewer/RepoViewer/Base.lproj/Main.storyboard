@@ -74,6 +74,13 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="sZj-uq-7j0" secondAttribute="bottom" id="x0R-eB-c8b"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="repoDescLbl" destination="IQ5-jK-D2R" id="9O8-gA-QdZ"/>
+                                    <outlet property="repoForksLbl" destination="5Gt-97-nxT" id="QIQ-CC-WzK"/>
+                                    <outlet property="repoNameLbl" destination="PTJ-gz-SR4" id="66I-e0-Ff6"/>
+                                    <outlet property="repoStarsLbl" destination="fED-iZ-A2s" id="7JL-Hn-DND"/>
+                                    <outlet property="repoUpdatedLbl" destination="X1i-9Z-J6A" id="jVz-Ey-c8O"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

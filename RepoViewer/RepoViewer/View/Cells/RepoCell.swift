@@ -9,7 +9,17 @@
 import UIKit
 
 class RepoCell: UITableViewCell {
+    
+    // Outlets
+    @IBOutlet weak var repoNameLbl: UILabel!
+    @IBOutlet weak var repoDescLbl: UILabel!
+    @IBOutlet weak var repoStarsLbl: UILabel!
+    @IBOutlet weak var repoForksLbl: UILabel!
+    @IBOutlet weak var repoUpdatedLbl: UILabel!
+    
 
+    
+    // Do index row assignment logic here
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
