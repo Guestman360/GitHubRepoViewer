@@ -19,6 +19,7 @@
 		04409400205C698000F4852F /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044093FF205C698000F4852F /* SectionHeader.xib */; };
 		04409402205C6A1B00F4852F /* RepoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409401205C6A1B00F4852F /* RepoManager.swift */; };
 		04409404205C6A6E00F4852F /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409403205C6A6E00F4852F /* Date+Extensions.swift */; };
+		04CA4CFA205C94CA0016E0AD /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA4CF9205C94CA0016E0AD /* SectionHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		044093FF205C698000F4852F /* SectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeader.xib; sourceTree = "<group>"; };
 		04409401205C6A1B00F4852F /* RepoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoManager.swift; sourceTree = "<group>"; };
 		04409403205C6A6E00F4852F /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		04CA4CF9205C94CA0016E0AD /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			children = (
 				044093F4205C651900F4852F /* Xibs */,
 				044093F6205C658200F4852F /* Cells */,
+				04CA4CF9205C94CA0016E0AD /* SectionHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				04409402205C6A1B00F4852F /* RepoManager.swift in Sources */,
 				04409404205C6A6E00F4852F /* Date+Extensions.swift in Sources */,
 				044093F8205C67D800F4852F /* RepoViewVC.swift in Sources */,
+				04CA4CFA205C94CA0016E0AD /* SectionHeader.swift in Sources */,
 				044093FE205C68E400F4852F /* Repo.swift in Sources */,
 				044093FA205C687000F4852F /* RepoCell.swift in Sources */,
 				044093FC205C689B00F4852F /* Constants.swift in Sources */,
@@ -444,6 +448,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DUKPL73RD7;
 				INFOPLIST_FILE = RepoViewer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MGApps.RepoViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -459,6 +464,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DUKPL73RD7;
 				INFOPLIST_FILE = RepoViewer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MGApps.RepoViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
