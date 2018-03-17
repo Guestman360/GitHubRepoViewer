@@ -20,6 +20,7 @@
 		04409402205C6A1B00F4852F /* RepoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409401205C6A1B00F4852F /* RepoManager.swift */; };
 		04409404205C6A6E00F4852F /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409403205C6A6E00F4852F /* Date+Extensions.swift */; };
 		04CA4CFA205C94CA0016E0AD /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA4CF9205C94CA0016E0AD /* SectionHeader.swift */; };
+		04CA4CFC205C98830016E0AD /* RepoOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA4CFB205C98830016E0AD /* RepoOwner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		04409401205C6A1B00F4852F /* RepoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoManager.swift; sourceTree = "<group>"; };
 		04409403205C6A6E00F4852F /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		04CA4CF9205C94CA0016E0AD /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		04CA4CFB205C98830016E0AD /* RepoOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoOwner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		044093CE205C625B00F4852F /* RepoViewer */ = {
 			isa = PBXGroup;
 			children = (
+				04CA4CFD205C9AAF0016E0AD /* Helpers */,
 				044093F5205C656300F4852F /* Constants */,
 				044093F3205C64F700F4852F /* Extensions */,
 				044093F2205C64F000F4852F /* API */,
@@ -119,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				044093FD205C68E400F4852F /* Repo.swift */,
+				04CA4CFB205C98830016E0AD /* RepoOwner.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,6 +183,13 @@
 				044093F9205C687000F4852F /* RepoCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		04CA4CFD205C9AAF0016E0AD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CA4CFC205C98830016E0AD /* RepoOwner.swift in Sources */,
 				044093D0205C625B00F4852F /* AppDelegate.swift in Sources */,
 				04409402205C6A1B00F4852F /* RepoManager.swift in Sources */,
 				04409404205C6A6E00F4852F /* Date+Extensions.swift in Sources */,
