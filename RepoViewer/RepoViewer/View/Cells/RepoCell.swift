@@ -19,29 +19,14 @@ class RepoCell: UITableViewCell {
     
     let dateFormatter = DateFormatter()
     
-    // Do index row assignment logic here
     override func awakeFromNib() {
         super.awakeFromNib()
         dateFormatter.dateStyle = .short
         dateFormatter.timeStyle = .none
-        //cardSetUp()
     }
-    // get image for star, fork and add next to respective label
-    // Add proxima nove reg, light and bold later, also gradient view
-    // Add a uiview to bckground later
-    //Set up the design of the cardview
-//    func cardSetUp() {
-//        cardView.backgroundColor = UIColor.white
-//        contentView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1.0)
-//        contentView.translatesAutoresizingMaskIntoConstraints = true
-//
-//        cardView.layer.cornerRadius = 5.0
-//        cardView.layer.masksToBounds = false
-//        cardView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
-//        cardView.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        cardView.layer.shadowOpacity = 0.8
-//    }
     
+    // Opted to put cell logic in the actual cell file, instead of leaving in VC file, separation of concerns!
+    /// This method sets the appropriate data to the appropriate UI element on the RepoCell
     func configure(with repo: Repo) {
         repoNameLbl.text = repo.name
         repoDescLbl.text = repo.description
@@ -51,7 +36,7 @@ class RepoCell: UITableViewCell {
             
             let translatedStarsCount = String.localizedStringWithFormat(NSLocalizedString("Stars: %i", comment: "Stars: %i"), stars)
             repoStarsLbl.text = translatedStarsCount
-            let translatedForksCount = String.localizedStringWithFormat(NSLocalizedString("Fork: %i", comment: "fork: %i"), forks)
+            let translatedForksCount = String.localizedStringWithFormat(NSLocalizedString("Fork: %i", comment: "Fork: %i"), forks)
             repoForksLbl.text = translatedForksCount
         }
         
@@ -61,7 +46,7 @@ class RepoCell: UITableViewCell {
         } else {
             dateString = NSLocalizedString("Unknown", comment: "")
         }
-        let translatedDate = String.localizedStringWithFormat(NSLocalizedString("Updated: %@", comment: "updated: %@"), dateString)
+        let translatedDate = String.localizedStringWithFormat(NSLocalizedString("Updated: %@", comment: "Updated: %@"), dateString)
         repoUpdatedLbl.text = translatedDate
     }
 

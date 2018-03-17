@@ -10,8 +10,9 @@ import UIKit
 
 extension UIViewController {
     
+    /// Hide keyboard by tapping on screen, very convenient 
     func hideKeyboard() {
-        // Blocks the tableview because it is covered by a view
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,
             action: #selector(UIViewController.dismissKeyboard))

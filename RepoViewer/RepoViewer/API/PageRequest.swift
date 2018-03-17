@@ -8,7 +8,6 @@
 
 import UIKit
 
-// Class constructs URL based on variable path and parameters
 class PageRequest {
     
     var path: String?
@@ -16,11 +15,11 @@ class PageRequest {
     var page: Int = 1
     var pageSize: Int = 6
     
+    // Computed property url utilizes var below to help set the url
     var url: URL? {
         return urlComponents.url
     }
     
-    /// Construct url components, should be overriden in child classes
     fileprivate var urlComponents: URLComponents {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"

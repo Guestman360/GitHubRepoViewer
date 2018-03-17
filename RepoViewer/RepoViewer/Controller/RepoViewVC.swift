@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class RepoViewVC: UIViewController {
     
     // Outlets
@@ -30,7 +28,7 @@ class RepoViewVC: UIViewController {
         tableView.dataSource = self
         tableView.tableFooterView = UIView(frame: .zero)
         
-        // set up activity indicator
+        // Setting up activity indicator
         activityIndicator.center = CGPoint(x: self.view.bounds.size.width/2, y: self.view.bounds.size.height/2)
         activityIndicator.color = UIColor.black
         self.view.addSubview(activityIndicator)
@@ -39,7 +37,7 @@ class RepoViewVC: UIViewController {
         hideKeyboard()
         
         // For our tableview cells
-        self.getNib()
+        getNib()
     }
     
     // method to help call our section header xib
@@ -61,6 +59,7 @@ class RepoViewVC: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    /// As name tells, jsut conveneint way to show or hide spinner
     func showSpinner() {
         activityIndicator.startAnimating()
     }
@@ -69,14 +68,13 @@ class RepoViewVC: UIViewController {
         activityIndicator.stopAnimating()
     }
     
-    // create a card view for cells??
     // http://www.kaleidosblog.com/swift-cache-how-to-download-and-cache-data-in-ios
     
     func searchReposForOwnerWithName(text: String?) {
         self.showSpinner()
         manager.closeCurrentSessionTaskIfNeeded()
         if let text = text {
-            manager.fetchRepos(ownerName: text, forceLoad: true) { [weak self] result in
+            manager.fetchReposByName(ownerName: text, forceLoad: true) { [weak self] result in
                 DispatchQueue.main.async {
                     switch result {
                     case .success:
@@ -98,6 +96,7 @@ class RepoViewVC: UIViewController {
                             title = NSLocalizedString("Error", comment: "")
                             message = NSLocalizedString("Mapping error", comment: "")
                         }
+                        // Using the cases above to construct an alert message
                         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
                         alertController.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: nil))
                         self?.present(alertController, animated: true, completion: nil)
@@ -128,7 +127,6 @@ extension RepoViewVC: UITableViewDelegate, UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: repoCellID, for: indexPath) as? RepoCell {
             
             if let repoAtIndex = manager.repoForIndexPath(indexPath) {
-                dump(repoAtIndex)
                 cell.configure(with: repoAtIndex)
             }
             return cell
@@ -140,7 +138,7 @@ extension RepoViewVC: UITableViewDelegate, UITableViewDataSource {
         return 40.0
     }
     
-    // For some style
+    // Sets the header with the appropriate language and number of repos with that language
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = self.tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionHeader") as? SectionHeader
         

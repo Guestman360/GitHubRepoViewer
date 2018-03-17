@@ -10,6 +10,8 @@ import Foundation
 
 struct Repo {
     
+    // Based props off sample app and from the GitHub docs, https://developer.github.com/v3/repos/#list-user-repositories
+    
     var identifier: Int?
     var name: String?
     var description: String?

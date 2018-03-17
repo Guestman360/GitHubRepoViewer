@@ -17,7 +17,6 @@
 		044093FE205C68E400F4852F /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044093FD205C68E400F4852F /* Repo.swift */; };
 		04409400205C698000F4852F /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044093FF205C698000F4852F /* SectionHeader.xib */; };
 		04409402205C6A1B00F4852F /* RepoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409401205C6A1B00F4852F /* RepoManager.swift */; };
-		04409404205C6A6E00F4852F /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409403205C6A6E00F4852F /* Date+Extensions.swift */; };
 		04CA4CFA205C94CA0016E0AD /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA4CF9205C94CA0016E0AD /* SectionHeader.swift */; };
 		04CA4CFC205C98830016E0AD /* RepoOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA4CFB205C98830016E0AD /* RepoOwner.swift */; };
 		04CA4CFF205CAF630016E0AD /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA4CFE205CAF630016E0AD /* UIViewController+Extensions.swift */; };
@@ -50,7 +49,6 @@
 		044093FD205C68E400F4852F /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		044093FF205C698000F4852F /* SectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeader.xib; sourceTree = "<group>"; };
 		04409401205C6A1B00F4852F /* RepoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoManager.swift; sourceTree = "<group>"; };
-		04409403205C6A6E00F4852F /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		04CA4CF9205C94CA0016E0AD /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		04CA4CFB205C98830016E0AD /* RepoOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoOwner.swift; sourceTree = "<group>"; };
 		04CA4CFE205CAF630016E0AD /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 		044093F3205C64F700F4852F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				04409403205C6A6E00F4852F /* Date+Extensions.swift */,
 				04CA4CFE205CAF630016E0AD /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
@@ -299,7 +296,6 @@
 				04CA4D03205CC8B40016E0AD /* GHHeaderLinkParser.swift in Sources */,
 				04CA4CFF205CAF630016E0AD /* UIViewController+Extensions.swift in Sources */,
 				04409402205C6A1B00F4852F /* RepoManager.swift in Sources */,
-				04409404205C6A6E00F4852F /* Date+Extensions.swift in Sources */,
 				044093F8205C67D800F4852F /* RepoViewVC.swift in Sources */,
 				04CA4CFA205C94CA0016E0AD /* SectionHeader.swift in Sources */,
 				044093FE205C68E400F4852F /* Repo.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-// Enums to handle successes and failures of fethcing and loading data
+/// Enums to best handle successes and failures of fetching and loading data
 enum RepoFetchingError: Error {
     case loadingError
     case loadingLimitsError
@@ -29,27 +29,34 @@ enum RepoFetchingResultType {
 
 class RepoManager {
     
-    // This will get dict of repos groupd by language
     private var repoOwner: RepoOwner?
     
     // MARK: - Data management
     
-    func fetchRepos(ownerName: String, forceLoad: Bool, completion: ((RepoFetchingResultType) -> Void)?) {
+    /**
+     This method is used to fetch the data from an owner's repo from GitHub
+     
+     - parameter ownerName: name of repo owner
+     - parameter forceLoad: forcibly loads a repo
+     - parameter completion: competion handler that contains a success or error case
+     - returns: dict with key as relation (first, next, prev, last) and the value a link
+     */
+    func fetchReposByName(ownerName: String, forceLoad: Bool, completion: ((RepoFetchingResultType) -> Void)?) {
         if forceLoad == true || repoOwner?.languageForRepo == nil {
             repoOwner = RepoOwner(name: ownerName)
             guard let owner = repoOwner else { completion?(.error(error: RepoFetchingError.mappingError)); return }
             var repoDict = [String: [Repo]]()
-            loadPage(1, name: owner.name) { result in
+            loadRepoByPage(1, name: owner.name) { result in
                 switch result {
                 case .partialSuccess(let json):
                     do {
-                        try self.mapReposTree(json, repo: &repoDict)
+                        try self.mapRepos(json, repo: &repoDict)
                     } catch {
                         completion?(.error(error: RepoFetchingError.mappingError))
                     }
                 case .success(let json):
                     do {
-                        try self.mapReposTree(json, repo: &repoDict)
+                        try self.mapRepos(json, repo: &repoDict)
                     } catch {
                         completion?(.error(error: RepoFetchingError.mappingError))
                     }
@@ -86,7 +93,14 @@ class RepoManager {
         }
     }
     
-    func mapReposTree(_ data: Data, repo: inout [String: [Repo]]) throws {
+    /**
+     This method will take data and map the repos by language
+     
+     - parameter data: this input takes a JSON string
+     - parameter repo: holds repo data, in this case the key is the language, and the value are an array of repos
+     - throws: checks if loading json failed, if so, runs the mapping logic
+     */
+    func mapRepos(_ data: Data, repo: inout [String: [Repo]]) throws {
         
         guard let json = try? JSONSerialization.jsonObject(with: data) else { throw RepoFetchingError.mappingError }
         guard let jsonarray = json as? [Any] else { throw RepoFetchingError.mappingError }
@@ -112,7 +126,14 @@ class RepoManager {
     
     private weak var currentSessionTask: URLSessionDataTask?
     
-    func loadPage(_ page: Int, name: String, completion: ((RepoLoadingResultType) -> Void)?) {
+    /**
+     This method can retrieve info about next avaialable page in owner's repo
+     
+     - parameter page: page number
+     - parameter name: name of repo owner
+     - parameter completion: completion handler that returns an enum of success or partial success
+     */
+    func loadRepoByPage(_ page: Int, name: String, completion: ((RepoLoadingResultType) -> Void)?) {
         let request = PageRequest()
         request.path = "/users/\(name)/repos"
         request.page = page
@@ -132,20 +153,18 @@ class RepoManager {
                     hasMorePages = true
                 }
             }
-            
+            // Recurse if link contains "next", signals there are more pages to load
             if hasMorePages {
                 completion?(RepoLoadingResultType.partialSuccess(data: pageData))
-                self.loadPage(page + 1, name: name, completion: completion)
+                self.loadRepoByPage(page + 1, name: name, completion: completion)
             } else {
                 completion?(RepoLoadingResultType.success(data: pageData))
             }
-            
         }
-        
         currentSessionTask?.resume()
     }
     
-    // Closes last executed session task
+    // Can be used to close the last session task, if still currently running
     func closeCurrentSessionTaskIfNeeded() {
         currentSessionTask?.cancel()
         currentSessionTask = nil
@@ -163,23 +182,23 @@ extension RepoManager {
     }
     
     func languageAtIndex(_ index: Int) -> String? {
-        guard let repoTree = repoOwner?.languageForRepo else { return nil }
-        guard repoTree.count > index else { fatalError("index can't be more of languages amount") }
-        return repoTree[index].language
+        guard let repo = repoOwner?.languageForRepo else { return nil }
+        guard repo.count > index else { fatalError("index can't be more than languages amount") }
+        return repo[index].language
     }
     
     func numberOfReposForLanguageAtIndex(_ index: Int) -> Int {
-        guard let repoTree = repoOwner?.languageForRepo else { return 0 }
-        guard repoTree.count > index else { fatalError("can't check number of repositoryes for out of bounds language index") }
-        let repos = repoTree[index].repos
+        guard let repo = repoOwner?.languageForRepo else { return 0 }
+        guard repo.count > index else { fatalError("can't check number of repo's for out of bounds language index") }
+        let repos = repo[index].repos
         return repos.count
     }
     
     func repoForIndexPath(_ indexPath: IndexPath) -> Repo? {
-        guard let repoTree = repoOwner?.languageForRepo else { return nil }
-        guard repoTree.count > indexPath.section else { fatalError("") }
-        let repos = repoTree[indexPath.section].repos
-        guard repos.count > indexPath.row else { fatalError("") }
+        guard let repo = repoOwner?.languageForRepo else { return nil }
+        guard repo.count > indexPath.section else { fatalError("Out of bounds") }
+        let repos = repo[indexPath.section].repos
+        guard repos.count > indexPath.row else { fatalError("Out of bounds") }
         return repos[indexPath.row]
     }
     
