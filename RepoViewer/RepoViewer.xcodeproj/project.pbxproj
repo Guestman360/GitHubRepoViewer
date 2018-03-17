@@ -12,7 +12,7 @@
 		044093D7205C625B00F4852F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044093D6205C625B00F4852F /* Assets.xcassets */; };
 		044093DA205C625B00F4852F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044093D8205C625B00F4852F /* LaunchScreen.storyboard */; };
 		044093E5205C625B00F4852F /* RepoViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044093E4205C625B00F4852F /* RepoViewerTests.swift */; };
-		044093F8205C67D800F4852F /* RepoViewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044093F7205C67D800F4852F /* RepoViewTVC.swift */; };
+		044093F8205C67D800F4852F /* RepoViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044093F7205C67D800F4852F /* RepoViewVC.swift */; };
 		044093FA205C687000F4852F /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044093F9205C687000F4852F /* RepoCell.swift */; };
 		044093FC205C689B00F4852F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044093FB205C689B00F4852F /* Constants.swift */; };
 		044093FE205C68E400F4852F /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044093FD205C68E400F4852F /* Repo.swift */; };
@@ -43,7 +43,7 @@
 		044093E0205C625B00F4852F /* RepoViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepoViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		044093E4205C625B00F4852F /* RepoViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewerTests.swift; sourceTree = "<group>"; };
 		044093E6205C625B00F4852F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		044093F7205C67D800F4852F /* RepoViewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewTVC.swift; sourceTree = "<group>"; };
+		044093F7205C67D800F4852F /* RepoViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewVC.swift; sourceTree = "<group>"; };
 		044093F9205C687000F4852F /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
 		044093FB205C689B00F4852F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		044093FD205C68E400F4852F /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 		044093F1205C64E600F4852F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				044093F7205C67D800F4852F /* RepoViewTVC.swift */,
+				044093F7205C67D800F4852F /* RepoViewVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -300,7 +300,7 @@
 				044093D0205C625B00F4852F /* AppDelegate.swift in Sources */,
 				04409402205C6A1B00F4852F /* RepoManager.swift in Sources */,
 				04409404205C6A6E00F4852F /* Date+Extensions.swift in Sources */,
-				044093F8205C67D800F4852F /* RepoViewTVC.swift in Sources */,
+				044093F8205C67D800F4852F /* RepoViewVC.swift in Sources */,
 				04CA4CFA205C94CA0016E0AD /* SectionHeader.swift in Sources */,
 				044093FE205C68E400F4852F /* Repo.swift in Sources */,
 				044093FA205C687000F4852F /* RepoCell.swift in Sources */,

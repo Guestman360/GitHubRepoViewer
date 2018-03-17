@@ -8,11 +8,12 @@
 
 import UIKit
 
-class RepoViewTVC: UITableViewController {
+class RepoViewVC: UIViewController {
     
     // Outlets
     @IBOutlet weak var searchBar: UISearchBar!
-
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +35,6 @@ class RepoViewTVC: UITableViewController {
     // create a card view for cells??
 }
 
-extension RepoViewTVC: UISearchBarDelegate {
+extension RepoViewVC: UISearchBarDelegate {
     
 }
