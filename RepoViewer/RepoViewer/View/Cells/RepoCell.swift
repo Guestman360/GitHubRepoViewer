@@ -17,11 +17,13 @@ class RepoCell: UITableViewCell {
     @IBOutlet weak var repoForksLbl: UILabel!
     @IBOutlet weak var repoUpdatedLbl: UILabel!
     
-
+    let dateFormatter = DateFormatter()
     
     // Do index row assignment logic here
     override func awakeFromNib() {
         super.awakeFromNib()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .none
         //cardSetUp()
     }
     // get image for star, fork and add next to respective label
@@ -39,11 +41,28 @@ class RepoCell: UITableViewCell {
 //        cardView.layer.shadowOffset = CGSize(width: 0, height: 0)
 //        cardView.layer.shadowOpacity = 0.8
 //    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func configure(with repo: Repo) {
+        repoNameLbl.text = repo.name
+        repoDescLbl.text = repo.description
+        
+        if let stars = repo.starsCount,
+            let forks = repo.forksCount {
+            
+            let translatedStarsCount = String.localizedStringWithFormat(NSLocalizedString("Stars: %i", comment: "Stars: %i"), stars)
+            repoStarsLbl.text = translatedStarsCount
+            let translatedForksCount = String.localizedStringWithFormat(NSLocalizedString("fork: %i", comment: "fork: %i"), forks)
+            repoForksLbl.text = translatedForksCount
+        }
+        
+        let dateString: String
+        if let updated = repo.lastUpdatedDate {
+            dateString = dateFormatter.string(from: updated)
+        } else {
+            dateString = NSLocalizedString("Unknown", comment: "")
+        }
+        let translatedDate = String.localizedStringWithFormat(NSLocalizedString("updated: %@", comment: "updated: %@"), dateString)
+        repoUpdatedLbl.text = translatedDate
     }
 
 }
