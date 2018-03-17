@@ -22,8 +22,22 @@ class RepoCell: UITableViewCell {
     // Do index row assignment logic here
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        //cardSetUp()
     }
+    // Add proxima nove reg, light and bold later, also gradient view
+    // Add a uiview to bckground later
+    //Set up the design of the cardview
+//    func cardSetUp() {
+//        cardView.backgroundColor = UIColor.white
+//        contentView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1.0)
+//        contentView.translatesAutoresizingMaskIntoConstraints = true
+//
+//        cardView.layer.cornerRadius = 5.0
+//        cardView.layer.masksToBounds = false
+//        cardView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
+//        cardView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        cardView.layer.shadowOpacity = 0.8
+//    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
