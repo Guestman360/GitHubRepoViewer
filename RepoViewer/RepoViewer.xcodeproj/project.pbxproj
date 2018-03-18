@@ -23,6 +23,8 @@
 		04CA4D01205CC8370016E0AD /* PageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA4D00205CC8370016E0AD /* PageRequest.swift */; };
 		04CA4D03205CC8B40016E0AD /* GHHeaderLinkParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA4D02205CC8B40016E0AD /* GHHeaderLinkParser.swift */; };
 		04F5D597205F02950047AABC /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D596205F02950047AABC /* Reachability.swift */; };
+		04F5D59A205F23360047AABC /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D598205F23360047AABC /* CoreDataModel.xcdatamodeld */; };
+		04F5D59C205F23500047AABC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D59B205F23500047AABC /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		04CA4D00205CC8370016E0AD /* PageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageRequest.swift; sourceTree = "<group>"; };
 		04CA4D02205CC8B40016E0AD /* GHHeaderLinkParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHHeaderLinkParser.swift; sourceTree = "<group>"; };
 		04F5D596205F02950047AABC /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		04F5D599205F23360047AABC /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		04F5D59B205F23500047AABC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 				044093D6205C625B00F4852F /* Assets.xcassets */,
 				044093D8205C625B00F4852F /* LaunchScreen.storyboard */,
 				044093DB205C625B00F4852F /* Info.plist */,
+				04F5D598205F23360047AABC /* CoreDataModel.xcdatamodeld */,
 			);
 			path = RepoViewer;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 		04F5D594205EFE4D0047AABC /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				04F5D59B205F23500047AABC /* CoreDataManager.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -304,10 +310,12 @@
 			files = (
 				04CA4CFC205C98830016E0AD /* RepoOwner.swift in Sources */,
 				044093D0205C625B00F4852F /* AppDelegate.swift in Sources */,
+				04F5D59A205F23360047AABC /* CoreDataModel.xcdatamodeld in Sources */,
 				04CA4D03205CC8B40016E0AD /* GHHeaderLinkParser.swift in Sources */,
 				04CA4CFF205CAF630016E0AD /* UIViewController+Extensions.swift in Sources */,
 				04409402205C6A1B00F4852F /* RepoManager.swift in Sources */,
 				044093F8205C67D800F4852F /* RepoViewVC.swift in Sources */,
+				04F5D59C205F23500047AABC /* CoreDataManager.swift in Sources */,
 				04CA4CFA205C94CA0016E0AD /* SectionHeader.swift in Sources */,
 				04F5D597205F02950047AABC /* Reachability.swift in Sources */,
 				044093FE205C68E400F4852F /* Repo.swift in Sources */,
@@ -558,6 +566,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		04F5D598205F23360047AABC /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				04F5D599205F23360047AABC /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 04F5D599205F23360047AABC /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 044093C4205C625B00F4852F /* Project object */;
 }
