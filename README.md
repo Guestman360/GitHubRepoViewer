@@ -1,5 +1,7 @@
 # GitHubRepoViewer
 
+Here is my attempt at a coding test, in which my task was to create a GitHub repository viewer. More detail below.
+
 <img src="https://user-images.githubusercontent.com/19701503/37562640-266b2da2-2a2b-11e8-8d9f-83cd493a7d34.png" width="300">
 
 I chose to keep it simple so I went with MVC design pattern for this project. After that, the next order of business was to find a way to get data from GitHub, so I looked at documentation to see if there is a url/route I could make a request to for data. I found `/users/:username/repos` which is exactly what I needed to make request with the owners name to fetch their repositories.
