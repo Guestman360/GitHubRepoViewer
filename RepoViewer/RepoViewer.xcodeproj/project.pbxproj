@@ -14,12 +14,14 @@
 		044093E5205C625B00F4852F /* RepoViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044093E4205C625B00F4852F /* RepoViewerTests.swift */; };
 		044093F8205C67D800F4852F /* RepoViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044093F7205C67D800F4852F /* RepoViewVC.swift */; };
 		044093FA205C687000F4852F /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044093F9205C687000F4852F /* RepoCell.swift */; };
-		044093FC205C689B00F4852F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044093FB205C689B00F4852F /* Constants.swift */; };
 		044093FE205C68E400F4852F /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044093FD205C68E400F4852F /* Repo.swift */; };
 		04409400205C698000F4852F /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044093FF205C698000F4852F /* SectionHeader.xib */; };
 		04409402205C6A1B00F4852F /* RepoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409401205C6A1B00F4852F /* RepoManager.swift */; };
-		04409404205C6A6E00F4852F /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04409403205C6A6E00F4852F /* Date+Extensions.swift */; };
 		04CA4CFA205C94CA0016E0AD /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA4CF9205C94CA0016E0AD /* SectionHeader.swift */; };
+		04CA4CFC205C98830016E0AD /* RepoOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA4CFB205C98830016E0AD /* RepoOwner.swift */; };
+		04CA4CFF205CAF630016E0AD /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA4CFE205CAF630016E0AD /* UIViewController+Extensions.swift */; };
+		04CA4D01205CC8370016E0AD /* PageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA4D00205CC8370016E0AD /* PageRequest.swift */; };
+		04CA4D03205CC8B40016E0AD /* GHHeaderLinkParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA4D02205CC8B40016E0AD /* GHHeaderLinkParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,12 +46,14 @@
 		044093E6205C625B00F4852F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044093F7205C67D800F4852F /* RepoViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewVC.swift; sourceTree = "<group>"; };
 		044093F9205C687000F4852F /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
-		044093FB205C689B00F4852F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		044093FD205C68E400F4852F /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		044093FF205C698000F4852F /* SectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeader.xib; sourceTree = "<group>"; };
 		04409401205C6A1B00F4852F /* RepoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoManager.swift; sourceTree = "<group>"; };
-		04409403205C6A6E00F4852F /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		04CA4CF9205C94CA0016E0AD /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		04CA4CFB205C98830016E0AD /* RepoOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoOwner.swift; sourceTree = "<group>"; };
+		04CA4CFE205CAF630016E0AD /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		04CA4D00205CC8370016E0AD /* PageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageRequest.swift; sourceTree = "<group>"; };
+		04CA4D02205CC8B40016E0AD /* GHHeaderLinkParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHHeaderLinkParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +95,7 @@
 		044093CE205C625B00F4852F /* RepoViewer */ = {
 			isa = PBXGroup;
 			children = (
-				044093F5205C656300F4852F /* Constants */,
+				04CA4CFD205C9AAF0016E0AD /* Helpers */,
 				044093F3205C64F700F4852F /* Extensions */,
 				044093F2205C64F000F4852F /* API */,
 				044093F1205C64E600F4852F /* Controller */,
@@ -119,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				044093FD205C68E400F4852F /* Repo.swift */,
+				04CA4CFB205C98830016E0AD /* RepoOwner.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -145,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				04409401205C6A1B00F4852F /* RepoManager.swift */,
+				04CA4D00205CC8370016E0AD /* PageRequest.swift */,
+				04CA4D02205CC8B40016E0AD /* GHHeaderLinkParser.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -152,7 +159,7 @@
 		044093F3205C64F700F4852F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				04409403205C6A6E00F4852F /* Date+Extensions.swift */,
+				04CA4CFE205CAF630016E0AD /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -165,20 +172,19 @@
 			path = Xibs;
 			sourceTree = "<group>";
 		};
-		044093F5205C656300F4852F /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				044093FB205C689B00F4852F /* Constants.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
 		044093F6205C658200F4852F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				044093F9205C687000F4852F /* RepoCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		04CA4CFD205C9AAF0016E0AD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,14 +291,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CA4CFC205C98830016E0AD /* RepoOwner.swift in Sources */,
 				044093D0205C625B00F4852F /* AppDelegate.swift in Sources */,
+				04CA4D03205CC8B40016E0AD /* GHHeaderLinkParser.swift in Sources */,
+				04CA4CFF205CAF630016E0AD /* UIViewController+Extensions.swift in Sources */,
 				04409402205C6A1B00F4852F /* RepoManager.swift in Sources */,
-				04409404205C6A6E00F4852F /* Date+Extensions.swift in Sources */,
 				044093F8205C67D800F4852F /* RepoViewVC.swift in Sources */,
 				04CA4CFA205C94CA0016E0AD /* SectionHeader.swift in Sources */,
 				044093FE205C68E400F4852F /* Repo.swift in Sources */,
 				044093FA205C687000F4852F /* RepoCell.swift in Sources */,
-				044093FC205C689B00F4852F /* Constants.swift in Sources */,
+				04CA4D01205CC8370016E0AD /* PageRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
