@@ -28,6 +28,15 @@ struct CoreDataManager {
     
     // MARK: - Core Data Saving support
     
+    /**
+     Call this method to cache the response coming in from GitHub
+     
+     - parameter repo: take a tuple which holds name of language and an array of repo objects
+     */
+    mutating func cacheAllReposFromOwner(repo: [LanguageForRepo]) {
+        
+    }
+    
     mutating func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
