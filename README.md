@@ -1,2 +1,3 @@
 # GitHubRepoViewer
-The coding test I received from CellPointMobile, my task is to create an app that can view a GitHub user's repo projects.
+
+![repoviewer-screenshot](https://user-images.githubusercontent.com/19701503/37562640-266b2da2-2a2b-11e8-8d9f-83cd493a7d34.png)
