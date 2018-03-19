@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 struct Repo {
     
@@ -31,5 +32,32 @@ struct Repo {
         if let lastUpdatedDateString = json["updated_at"] as? String {
             lastUpdatedDate = ISO8601DateFormatter().date(from: lastUpdatedDateString)
         }
+    }
+}
+
+/// Extenson of Repo is for core data, to help with sotring/caching a response if necessary
+extension Repo {
+    
+    enum CoreDataKeys: String {
+        case identifier
+        case name
+        case desc
+        case language
+        case starsCount
+        case forksCount
+        case lastUpdatedDate
+    }
+    
+    @discardableResult
+    func createManagedObject(forContext context: NSManagedObjectContext) -> NSManagedObject? {
+        let entity = NSEntityDescription.insertNewObject(forEntityName: "Repository", into: context)
+        entity.setValue(identifier, forKey: CoreDataKeys.identifier.rawValue)
+        entity.setValue(name, forKey: CoreDataKeys.name.rawValue)
+        entity.setValue(description, forKey: CoreDataKeys.desc.rawValue)
+        entity.setValue(language, forKey: CoreDataKeys.language.rawValue)
+        entity.setValue(starsCount, forKey: CoreDataKeys.name.rawValue)
+        entity.setValue(forksCount, forKey: CoreDataKeys.forksCount.rawValue)
+        entity.setValue(lastUpdatedDate, forKey: CoreDataKeys.lastUpdatedDate.rawValue)
+        return entity
     }
 }
